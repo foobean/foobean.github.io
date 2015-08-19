@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next use-motion ">
+<html class="theme-next use-motion theme-next-mist">
 <head>
   
 
@@ -37,40 +37,39 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="hexo配制网上比较多，下面主要是3.0版本遇到问题
+<meta name="description" content="hexo配制网上比较多，下面是我配制3.0版本遇到问题
 git配制官方https://hexo.io/docs/deployment.html#Git 
 
 deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)repo: git@github.com:username/username.github.io.git
-部署hexo generatehexo depl">
+1234deploy:  type: git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo3.0下配制git问题">
 <meta property="og:url" content="http://foobean.com/2015/08/18/hexo3.0下配制git问题/index.html">
 <meta property="og:site_name" content="FooBean">
-<meta property="og:description" content="hexo配制网上比较多，下面主要是3.0版本遇到问题
+<meta property="og:description" content="hexo配制网上比较多，下面是我配制3.0版本遇到问题
 git配制官方https://hexo.io/docs/deployment.html#Git 
 
 deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)repo: git@github.com:username/username.github.io.git
-部署hexo generatehexo depl">
+1234deploy:  type: git">
 <meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/imgclipboard.png">
-<meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/imgdeploy-git.png">
 <meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/imgnolayout-index.png">
-<meta property="og:updated_time" content="2015-08-19T03:47:47.202Z">
+<meta property="og:updated_time" content="2015-08-19T06:40:19.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo3.0下配制git问题">
-<meta name="twitter:description" content="hexo配制网上比较多，下面主要是3.0版本遇到问题
+<meta name="twitter:description" content="hexo配制网上比较多，下面是我配制3.0版本遇到问题
 git配制官方https://hexo.io/docs/deployment.html#Git 
 
 deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)repo: git@github.com:username/username.github.io.git
-部署hexo generatehexo depl">
+1234deploy:  type: git">
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
+    scheme: 'Mist',
     sidebar: 'post'
   };
 </script>
-
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <title> hexo3.0下配制git问题 | FooBean </title>
 </head>
 
@@ -238,15 +237,18 @@ deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)repo: git@
       
 
       
-        <span itemprop="articleBody"><p>hexo配制网上比较多，下面主要是3.0版本遇到问题</p>
+        <span itemprop="articleBody"><p>hexo配制网上比较多，下面是我配制3.0版本遇到问题</p>
 <h2 id="git配制">git配制</h2><p>官方<a href="https://hexo.io/docs/deployment.html#Git" target="_blank" rel="external">https://hexo.io/docs/deployment.html#Git</a> </p>
 <p><img src="http://7xl7cj.com1.z0.glb.clouddn.com/imgclipboard.png" alt=""></p>
-<h2 id="deploy:_type:_git(后面是有个空格的,hexo3-0之后type填写git)">deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)</h2><p>repo: git@github.com:username/username.github.io.git<br><img src="http://7xl7cj.com1.z0.glb.clouddn.com/imgdeploy-git.png" alt=""></p>
+<h2 id="deploy:_type:_git(后面是有个空格的,hexo3-0之后type填写git)">deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)</h2><p>repo: git@github.com:username/username.github.io.git</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git<span class="annotation">@github</span>.com:foobean/foobean.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <h2 id="部署">部署</h2><p>hexo generate<br>hexo deploy #配好git后会把public目录下静态文件部署到git上<br>或<br>hexo d -g</p>
 <p>常用命令：<br>hexo clean<br>hexo d -g #生成加部署<br>hexo s -g #预览加部署<br>简写：<br>hexo n == hexo new<br>hexo g == hexo generate<br>hexo s == hexo server<br>hexo d == hexo deploy</p>
 <p>现在可以访问你的地址了 <a href="http://username.github.io/" target="_blank" rel="external">http://username.github.io/</a></p>
 <h2 id="no_layout:_index-html">no layout: index.html</h2><p>这个问题因该是hexo下_config.yml配制有问题，最好仔细检查一下或重新初始化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
 <p><img src="http://7xl7cj.com1.z0.glb.clouddn.com/imgnolayout-index.png" alt=""></p>
+<p>参考<br><a href="http://www.zhihu.com/topic/19851557/newest" target="_blank" rel="external">http://www.zhihu.com/topic/19851557/newest</a></p>
+<h2 id="声明">声明</h2><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
 </span>
       
     </div>
@@ -384,6 +386,16 @@ deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)repo: git@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/foobean" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/foobean" target="_blank">Weibo</a>
+              </span>
+            
+          
         </div>
 
         
@@ -401,7 +413,7 @@ deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)repo: git@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git配制"><span class="nav-number">1.</span> <span class="nav-text">git配制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deploy:_type:_git(后面是有个空格的,hexo3-0之后type填写git)"><span class="nav-number">2.</span> <span class="nav-text">deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署"><span class="nav-number">3.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#no_layout:_index-html"><span class="nav-number">4.</span> <span class="nav-text">no layout: index.html</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git配制"><span class="nav-number">1.</span> <span class="nav-text">git配制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deploy:_type:_git(后面是有个空格的,hexo3-0之后type填写git)"><span class="nav-number">2.</span> <span class="nav-text">deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署"><span class="nav-number">3.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#no_layout:_index-html"><span class="nav-number">4.</span> <span class="nav-text">no layout: index.html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">5.</span> <span class="nav-text">声明</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -432,8 +444,19 @@ deploy: type: git(后面是有个空格的,hexo3.0之后type填写git)repo: git@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
+   
+</div>
+<br/>
+<div class="theme-info">
+  <span id="busuanzi_container_site_pv">
+      本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  -
+  <span id="busuanzi_container_site_uv">
+      本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
 </div>
 
 
