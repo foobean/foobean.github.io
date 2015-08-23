@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="proguard,代码混淆," />
 
 
 
@@ -37,19 +37,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="最近项目需要用的proguard就简单研究一下。AS新建时默认就是用proguard做代码混淆新建默认就这样的1234567buildTypes &amp;#123;       release &amp;#123;           minifyEnabled  false           proguardFiles getDefaultProguardFile(&apos;proguard-android.txt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://foobean.com/2015/08/18/hello-world/index.html">
+<meta property="og:title" content="AS下的proguard使用心得">
+<meta property="og:url" content="http://foobean.com/2015/08/23/proguard-mix/index.html">
 <meta property="og:site_name" content="FooBean">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-08-18T09:27:23.007Z">
+<meta property="og:description" content="最近项目需要用的proguard就简单研究一下。AS新建时默认就是用proguard做代码混淆新建默认就这样的1234567buildTypes &amp;#123;       release &amp;#123;           minifyEnabled  false           proguardFiles getDefaultProguardFile(&apos;proguard-android.txt">
+<meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-1.png">
+<meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-3.png">
+<meta property="og:updated_time" content="2015-08-23T04:07:33.747Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="AS下的proguard使用心得">
+<meta name="twitter:description" content="最近项目需要用的proguard就简单研究一下。AS新建时默认就是用proguard做代码混淆新建默认就这样的1234567buildTypes &amp;#123;       release &amp;#123;           minifyEnabled  false           proguardFiles getDefaultProguardFile(&apos;proguard-android.txt">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +58,7 @@ Quick">
   };
 </script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <title> Hello World | FooBean </title>
+  <title> AS下的proguard使用心得 | FooBean </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -176,7 +175,7 @@ Quick">
           
           
             
-              Hello World
+              AS下的proguard使用心得
             
           
         </h1>
@@ -185,19 +184,34 @@ Quick">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-18T17:27:23+08:00" content="2015-08-18">
-            2015-08-18
+          <time itemprop="dateCreated" datetime="2015-08-23T11:02:59+08:00" content="2015-08-23">
+            2015-08-23
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Android/" itemprop="url" rel="index">
+                  <span itemprop="name">Android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/18/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/18/hello-world/" itemprop="commentsCount"></span>
+              <a href="/2015/08/23/proguard-mix/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/23/proguard-mix/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -211,31 +225,45 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><p>最近项目需要用的proguard就简单研究一下。AS新建时默认就是用proguard做代码混淆<br>新建默认就这样的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">buildTypes &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           <span class="function">minifyEnabled  <span class="keyword">false</span></span><br><span class="line"></span><br><span class="line">           proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>, 'proguard-rules.pro'</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>minifyEnabled true表示混淆<br>proguard-android.txt是sdk下groguard默认的文件，具体地址在：android-sdk/tools/proguard/proguard-android.txt<br>proguard-rules.pro就是AS下需要配制文件，默认在项目app根目录下</p>
+<p>当修改minifyEnabled true时，必须配制signingConfigs打包key文件，否则会报错，配制如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">signingConfigs &#123;</span><br><span class="line">        debug &#123;</span><br><span class="line">            <span class="function">storeFile <span class="title">file</span><span class="params">(<span class="string">"C:/Users/51/.android/debug.keystore"</span>)</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        release </span>&#123;</span><br><span class="line">            keyAlias <span class="string">'xxxx'</span></span><br><span class="line">            keyPassword <span class="string">'123456'</span></span><br><span class="line">            <span class="function">storeFile <span class="title">file</span><span class="params">(<span class="string">'E:/key/xxxx.keystore'</span>)</span></span><br><span class="line">            storePassword 'xxxxx'</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>好的，下面讲下proguard-rules.pro主要配制及我遇到问题，这个网上比较多<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-keep <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> * <span class="keyword">extends</span> <span class="title">android</span>.<span class="title">app</span>.<span class="title">Service</span></span></span><br></pre></td></tr></table></figure></p>
+<p>keep 保持不变意思，如上面继承service类都不需要混淆</p>
+<h1 id="保持指定的类和类的成员的名称不被混淆">保持指定的类和类的成员的名称不被混淆</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># For native methods, see http://proguard.sourceforge.net/manual/examples.html#native</span><br><span class="line">-keepclasseswithmembernames class * &#123;</span><br><span class="line"> native &lt;methods&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="保持enum类不被混淆">保持enum类不被混淆</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations</span><br><span class="line">-keepclassmembers enum * &#123;</span><br><span class="line"> public static **[] values();</span><br><span class="line"> public static ** valueOf(java.lang.String);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="保持内部类不被混淆">保持内部类不被混淆</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#-keep class **$* &#123;  *;&#125;</span><br><span class="line">-keepnames class com.zcm.mobile.money.*$* &#123;</span><br><span class="line">    public &lt;fields&gt;;</span><br><span class="line">    public &lt;methods&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-keepnames class com.zcm.mobile.money.fragment.*$* &#123;</span><br><span class="line">    public &lt;fields&gt;;</span><br><span class="line">    public &lt;methods&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="json类的包或者orm类的包可能会报错，解析时">json类的包或者orm类的包可能会报错，解析时</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-keepattributes Exceptions,InnerClasses,Signature</span><br><span class="line">-keepattributes *Annotation*</span><br><span class="line">-keepattributes SourceFile,LineNumberTable</span><br></pre></td></tr></table></figure>
+<h1 id="保持内部接口不被混淆">保持内部接口不被混淆</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-keep <span class="class"><span class="keyword">class</span>  <span class="title">com</span>.<span class="title">android</span>.<span class="title">app</span>.** <span class="keyword">implements</span>  <span class="title">com</span>.<span class="title">android</span>.<span class="title">app</span>.<span class="title">Platform</span>$<span class="title">ICallback</span> </span>&#123;*;&#125;   </span><br><span class="line"></span><br><span class="line">-keep <span class="class"><span class="keyword">class</span> <span class="title">android</span>.<span class="title">support</span>.<span class="title">v4</span>.<span class="title">app</span>.** </span>&#123; *; &#125;</span><br><span class="line">-keep <span class="class"><span class="keyword">interface</span> <span class="title">android</span>.<span class="title">support</span>.<span class="title">v4</span>.<span class="title">app</span>.** </span>&#123; *; &#125;</span><br><span class="line">-keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">actionbarsherlock</span>.** </span>&#123; *; &#125;</span><br><span class="line">-keep <span class="class"><span class="keyword">interface</span> <span class="title">com</span>.<span class="title">actionbarsherlock</span>.** </span>&#123; *; &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="第三方如universal-image-loader">第三方如universal-image-loader</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-keep class com.nostra13.** &#123;*;&#125;</span><br><span class="line"></span><br><span class="line">#-libraryjars libs/gson-2.3.jar</span><br><span class="line">-keep class com.google.** &#123;*;&#125;</span><br><span class="line">-dontwarn com.google.**</span><br><span class="line"></span><br><span class="line">#-libraryjars libs/fastjson-1.2.5.jar</span><br><span class="line">-keep class com.alibaba.** &#123; *; &#125;</span><br><span class="line">-dontwarn com.alibaba.**</span><br></pre></td></tr></table></figure>
+<p>#也有jpush这个一般官网都有说明，它们官网已经混淆过的，所以我们不需要再混淆了否则就报错<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#-libraryjars libs/jpush-sdk-release1.7.5.jar</span><br><span class="line">-keep class cn.jpush.** &#123; *; &#125;</span><br><span class="line">-dontwarn cn.jpush.**</span><br></pre></td></tr></table></figure></p>
+<p>也有打包时会报一些奇怪错误如<br><img src="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-1.png" alt=""><br>自己写的库，打包好@aar,不需要libs吧都去掉<br>否则有些代码被混淆了找不到references</p>
+<p>ok，混淆成功后代码就这样的，所有方法，参数都用a,b,c表示<br><img src="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-3.png" alt=""></p>
+<h2 id="声明">声明</h2><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/proguard/" rel="tag">#proguard</a>
+          
+            <a href="/tags/代码混淆/" rel="tag">#代码混淆</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/18/hexo3.0下配制git问题/" rel="prev">hexo3.0下配制git问题</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/19/customTabTagerIndicator/" rel="next">自定义TabPageIndicator样式</a>
             
           </div>
         </div>
@@ -250,10 +278,10 @@ Quick">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/08/18/hello-world/"
-     data-title="Hello World"
+        <div class="ds-share flat" data-thread-key="2015/08/23/proguard-mix/"
+     data-title="AS下的proguard使用心得"
      data-content=""
-     data-url="http://foobean.com/2015/08/18/hello-world/">
+     data-url="http://foobean.com/2015/08/23/proguard-mix/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -283,8 +311,8 @@ Quick">
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/18/hello-world/"
-                   data-title="Hello World" data-url="http://foobean.com/2015/08/18/hello-world/">
+              <div class="ds-thread" data-thread-key="2015/08/23/proguard-mix/"
+                   data-title="AS下的proguard使用心得" data-url="http://foobean.com/2015/08/23/proguard-mix/">
               </div>
             
           </div>
@@ -376,7 +404,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#保持指定的类和类的成员的名称不被混淆"><span class="nav-number">1.</span> <span class="nav-text">保持指定的类和类的成员的名称不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持enum类不被混淆"><span class="nav-number">2.</span> <span class="nav-text">保持enum类不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持内部类不被混淆"><span class="nav-number">3.</span> <span class="nav-text">保持内部类不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#json类的包或者orm类的包可能会报错，解析时"><span class="nav-number">4.</span> <span class="nav-text">json类的包或者orm类的包可能会报错，解析时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持内部接口不被混淆"><span class="nav-number">5.</span> <span class="nav-text">保持内部接口不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三方如universal-image-loader"><span class="nav-number">6.</span> <span class="nav-text">第三方如universal-image-loader</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">6.1.</span> <span class="nav-text">声明</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
