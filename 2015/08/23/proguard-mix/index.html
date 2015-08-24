@@ -45,7 +45,7 @@
 <meta property="og:description" content="最近项目使用proguard的一些心得记录一下。AS新建时默认就是用proguard做代码混淆新建默认就这样的1234567buildTypes &amp;#123;       release &amp;#123;           minifyEnabled  false           proguardFiles getDefaultProguardFile(&apos;proguard-android.txt">
 <meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-1.png">
 <meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-4.png">
-<meta property="og:updated_time" content="2015-08-23T04:20:00.915Z">
+<meta property="og:updated_time" content="2015-08-24T01:19:40.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AS下的proguard使用心得">
 <meta name="twitter:description" content="最近项目使用proguard的一些心得记录一下。AS新建时默认就是用proguard做代码混淆新建默认就这样的1234567buildTypes &amp;#123;       release &amp;#123;           minifyEnabled  false           proguardFiles getDefaultProguardFile(&apos;proguard-android.txt">
@@ -239,7 +239,8 @@
 <p>#也有jpush这个一般官网都有说明，它们官网已经混淆过的，所以我们不需要再混淆了否则就报错<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#-libraryjars libs/jpush-sdk-release1.7.5.jar</span><br><span class="line">-keep class cn.jpush.** &#123; *; &#125;</span><br><span class="line">-dontwarn cn.jpush.**</span><br></pre></td></tr></table></figure></p>
 <p>也有打包时会报一些奇怪错误如<br><img src="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-1.png" alt=""><br>自己写的库，打包好@aar,不需要libs吧都去掉<br>否则有些代码被混淆了找不到references</p>
 <p>ok，混淆成功后代码就这样的，所有方法，参数都用a,b,c表示<br><img src="http://7xl7cj.com1.z0.glb.clouddn.com/imgprogurad-q-4.png" alt=""></p>
-<h2 id="声明">声明</h2><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
+<p>更多例子请参考<a href="http://proguard.sourceforge.net/#manual/examples.html" target="_blank" rel="external">Proguard</a>。<br>查看<a href="https://github.com/futurice/android-best-practices/blob/master/templates/rx-architecture/app/proguard-rules.pro" target="_blank" rel="external">this template’s ProGuard config</a> 中的一些例子。</p>
+<h1 id="声明">声明</h1><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
 </span>
       
     </div>
@@ -404,7 +405,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#保持指定的类和类的成员的名称不被混淆"><span class="nav-number">1.</span> <span class="nav-text">保持指定的类和类的成员的名称不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持enum类不被混淆"><span class="nav-number">2.</span> <span class="nav-text">保持enum类不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持内部类不被混淆"><span class="nav-number">3.</span> <span class="nav-text">保持内部类不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#json类的包或者orm类的包可能会报错，解析时"><span class="nav-number">4.</span> <span class="nav-text">json类的包或者orm类的包可能会报错，解析时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持内部接口不被混淆"><span class="nav-number">5.</span> <span class="nav-text">保持内部接口不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三方如universal-image-loader"><span class="nav-number">6.</span> <span class="nav-text">第三方如universal-image-loader</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">6.1.</span> <span class="nav-text">声明</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#保持指定的类和类的成员的名称不被混淆"><span class="nav-number">1.</span> <span class="nav-text">保持指定的类和类的成员的名称不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持enum类不被混淆"><span class="nav-number">2.</span> <span class="nav-text">保持enum类不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持内部类不被混淆"><span class="nav-number">3.</span> <span class="nav-text">保持内部类不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#json类的包或者orm类的包可能会报错，解析时"><span class="nav-number">4.</span> <span class="nav-text">json类的包或者orm类的包可能会报错，解析时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#保持内部接口不被混淆"><span class="nav-number">5.</span> <span class="nav-text">保持内部接口不被混淆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三方如universal-image-loader"><span class="nav-number">6.</span> <span class="nav-text">第三方如universal-image-loader</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#声明"><span class="nav-number">7.</span> <span class="nav-text">声明</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
