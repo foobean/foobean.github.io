@@ -1,0 +1,699 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="JAVA程序猿|Android攻城狮" />
+
+
+
+  <meta name="keywords" content="button," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="最近忙公司的微信开发，Android相关工作暂停一段时间，但原来用的一些技术点总结分享一下Button好像没有什么好讲的,那下面就分享一下我用过的Button
+最简单的按下Button123456789101112&amp;lt;Button        android:id=&quot;@+id/button_sumbit_id&quot;        android:layout_width=&quot;fill_parent">
+<meta property="og:type" content="article">
+<meta property="og:title" content="那些年，我用过Button">
+<meta property="og:url" content="http://foobean.com/2015/09/21/layoutButton/index.html">
+<meta property="og:site_name" content="FooBean">
+<meta property="og:description" content="最近忙公司的微信开发，Android相关工作暂停一段时间，但原来用的一些技术点总结分享一下Button好像没有什么好讲的,那下面就分享一下我用过的Button
+最简单的按下Button123456789101112&amp;lt;Button        android:id=&quot;@+id/button_sumbit_id&quot;        android:layout_width=&quot;fill_parent">
+<meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/empty-frames-buttom20150922.gif">
+<meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/radius-buttom20150922.gif">
+<meta property="og:image" content="http://7xl7cj.com1.z0.glb.clouddn.com/layout-buttom20150922.gif">
+<meta property="og:updated_time" content="2015-09-22T08:38:34.760Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="那些年，我用过Button">
+<meta name="twitter:description" content="最近忙公司的微信开发，Android相关工作暂停一段时间，但原来用的一些技术点总结分享一下Button好像没有什么好讲的,那下面就分享一下我用过的Button
+最简单的按下Button123456789101112&amp;lt;Button        android:id=&quot;@+id/button_sumbit_id&quot;        android:layout_width=&quot;fill_parent">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <title> 那些年，我用过Button | FooBean </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?eef9333d6a09af6320f7ecce4dc8bdb4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">FooBean</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              那些年，我用过Button
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-21T21:04:50+08:00" content="2015-09-21">
+            2015-09-21
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Android/" itemprop="url" rel="index">
+                  <span itemprop="name">Android</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/09/21/layoutButton/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/layoutButton/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>最近忙公司的微信开发，Android相关工作暂停一段时间，但原来用的一些技术点总结分享一下<br>Button好像没有什么好讲的,那下面就分享一下我用过的Button</p>
+<h2 id="最简单的按下Button">最简单的按下Button</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">Button</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/button_sumbit_id"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"fill_parent"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"45dp"</span></span><br><span class="line">        <span class="attribute">android:layout_centerHorizontal</span>=<span class="value">"true"</span></span><br><span class="line">        <span class="attribute">android:layout_marginLeft</span>=<span class="value">"20dp"</span></span><br><span class="line">        <span class="attribute">android:layout_marginRight</span>=<span class="value">"20dp"</span></span><br><span class="line">        <span class="attribute">android:layout_marginTop</span>=<span class="value">"20dp"</span></span><br><span class="line">        <span class="attribute">android:background</span>=<span class="value">"@drawable/red_buttom_but_bg"</span></span><br><span class="line">        <span class="attribute">android:text</span>=<span class="value">"登  录"</span></span><br><span class="line">        <span class="attribute">android:textSize</span>=<span class="value">"18sp"</span></span><br><span class="line">        <span class="attribute">android:textColor</span>=<span class="value">"@android:color/white"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>red_buttom_but_bg.xml设置通过color来定义背景<br>android:state_pressed=”true”为按下的颜色<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">selector</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:drawable</span>=<span class="value">"@color/top_color_pressed"</span> <span class="attribute">android:state_pressed</span>=<span class="value">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:drawable</span>=<span class="value">"@color/top_color"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">selector</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>colors.xml中定义<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">color</span> <span class="attribute">name</span>=<span class="value">"top_color"</span>&gt;</span>#d60b17<span class="tag">&lt;/<span class="title">color</span>&gt;</span> <span class="comment">&lt;!--d50c17--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">color</span> <span class="attribute">name</span>=<span class="value">"top_color_pressed"</span>&gt;</span>#d27374<span class="tag">&lt;/<span class="title">color</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>是不是非常简单最实用的button</p>
+<h2 id="空框子button">空框子button</h2><p>用textview+xml效果配合实现<br><img src="http://7xl7cj.com1.z0.glb.clouddn.com/empty-frames-buttom20150922.gif" alt=""></p>
+<p>textview定义主要是textColor，background的配合<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">            <span class="attribute">android:id</span>=<span class="value">"@+id/go_register_textview_id"</span></span><br><span class="line">            <span class="attribute">android:layout_width</span>=<span class="value">"100dp"</span></span><br><span class="line">            <span class="attribute">android:layout_height</span>=<span class="value">"42dp"</span></span><br><span class="line">            <span class="attribute">android:padding</span>=<span class="value">"10dp"</span></span><br><span class="line">            <span class="attribute">android:text</span>=<span class="value">"注册"</span></span><br><span class="line">            <span class="attribute">android:textSize</span>=<span class="value">"16sp"</span></span><br><span class="line">            <span class="attribute">android:textColor</span>=<span class="value">"@color/orange_font_pressed_white"</span></span><br><span class="line">            <span class="attribute">android:background</span>=<span class="value">"@drawable/stroke_orange_text_white_bg"</span></span><br><span class="line">            <span class="attribute">android:clickable</span>=<span class="value">"true"</span></span><br><span class="line">            <span class="attribute">android:gravity</span>=<span class="value">"center"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>orange_font_pressed_white.xml写法 默认为深色，点击后为白色<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">selector</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:state_selected</span>=<span class="value">"true"</span> <span class="attribute">android:color</span>=<span class="value">"@color/white"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:state_pressed</span>=<span class="value">"true"</span> <span class="attribute">android:color</span>=<span class="value">"@color/white"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:color</span>=<span class="value">"@color/dark_orange"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">selector</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>stroke_orange_text_white_bg.xml写法<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">selector</span></span><br><span class="line">    <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:state_pressed</span>=<span class="value">"true"</span> &gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">shape</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 按下渐变 主要就是背景填充 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">gradient</span></span><br><span class="line">                <span class="attribute">android:startColor</span>=<span class="value">"@color/dark_orange"</span></span><br><span class="line">                <span class="attribute">android:endColor</span>=<span class="value">"@color/dark_orange"</span></span><br><span class="line">                <span class="attribute">android:type</span>=<span class="value">"radial"</span></span><br><span class="line">                <span class="attribute">android:gradientRadius</span>=<span class="value">"50"</span> /&gt;</span> <span class="comment">&lt;!-- android:type="radial"以开始色为中心，android:gradientRadius="50"渐变色半径--&gt;</span></span><br><span class="line">             <span class="comment">&lt;!--边线的颜色--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">stroke</span> <span class="attribute">android:width</span>=<span class="value">"0.5dip"</span> <span class="attribute">android:color</span>=<span class="value">"@color/dark_orange"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">item</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">shape</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--默认显示 背景色 透明 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">solid</span> <span class="attribute">android:color</span>=<span class="value">"@android:color/transparent"</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 边框色 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">stroke</span> <span class="attribute">android:width</span>=<span class="value">"0.5dip"</span> <span class="attribute">android:color</span>=<span class="value">"@color/dark_orange"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">selector</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="圆角效果_button">圆角效果 button</h2><p>主要也是通过shape来绘画出来<br><img src="http://7xl7cj.com1.z0.glb.clouddn.com/radius-buttom20150922.gif" alt=""></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">Button</span></span><br><span class="line">                <span class="attribute">android:id</span>=<span class="value">"@+id/ljqg_text_id"</span></span><br><span class="line">                <span class="attribute">android:layout_width</span>=<span class="value">"100dp"</span></span><br><span class="line">                <span class="attribute">android:layout_height</span>=<span class="value">"48dp"</span></span><br><span class="line">                <span class="attribute">android:layout_marginLeft</span>=<span class="value">"10dp"</span></span><br><span class="line">                <span class="attribute">android:text</span>=<span class="value">"立即抢购"</span></span><br><span class="line">                <span class="attribute">android:textColor</span>=<span class="value">"@color/white"</span></span><br><span class="line">                <span class="attribute">android:background</span>=<span class="value">"@drawable/round_text_rose_bg"</span></span><br><span class="line">                <span class="attribute">android:layout_weight</span>=<span class="value">"1"</span></span><br><span class="line">                <span class="attribute">android:textSize</span>=<span class="value">"18sp"</span></span><br><span class="line">                /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>round_text_rose_bg.xml定义<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">selector</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:state_pressed</span>=<span class="value">"false"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">shape</span> <span class="attribute">android:shape</span>=<span class="value">"rectangle"</span> &gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 填充的颜色 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">solid</span> <span class="attribute">android:color</span>=<span class="value">"@color/top_color"</span> /&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 设置按钮的四个角为弧形 --&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- android:radius 弧形的半径 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">corners</span> <span class="attribute">android:radius</span>=<span class="value">"10dip"</span> /&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- padding：Button里面的文字与Button边界的间隔 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">padding</span> <span class="attribute">android:top</span>=<span class="value">"3dp"</span> <span class="attribute">android:left</span>=<span class="value">"5dp"</span> <span class="attribute">android:right</span>=<span class="value">"5dp"</span> <span class="attribute">android:bottom</span>=<span class="value">"3dp"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:state_pressed</span>=<span class="value">"true"</span>&gt;</span> <span class="comment">&lt;!-- 按下的颜色 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">shape</span> <span class="attribute">android:shape</span>=<span class="value">"rectangle"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">solid</span> <span class="attribute">android:color</span>=<span class="value">"@color/top_color_pressed"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">corners</span> <span class="attribute">android:radius</span>=<span class="value">"10dip"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">item</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">selector</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="layout父类点击">layout父类点击</h2><p><img src="http://7xl7cj.com1.z0.glb.clouddn.com/layout-buttom20150922.gif" alt=""><br>在父控件中添加android:clickable=“true” android:focusable=“true”，而在子控件中添加android:duplicateParentState=“true”子控件就能获得父控件的点击事件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">RelativeLayout</span></span><br><span class="line">           <span class="attribute">android:id</span>=<span class="value">"@+id/more_myslef_id"</span></span><br><span class="line">           <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">           <span class="attribute">android:layout_height</span>=<span class="value">"45dp"</span></span><br><span class="line">           <span class="attribute">android:orientation</span>=<span class="value">"horizontal"</span></span><br><span class="line">           <span class="attribute">android:paddingLeft</span>=<span class="value">"15dp"</span></span><br><span class="line">           <span class="attribute">android:background</span>=<span class="value">"@drawable/white_buttom_pressed_red"</span></span><br><span class="line">           <span class="attribute">android:clickable</span>=<span class="value">"true"</span></span><br><span class="line">           <span class="attribute">android:focusable</span>=<span class="value">"true"</span></span><br><span class="line">           &gt;</span></span><br><span class="line"></span><br><span class="line">           <span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">               <span class="attribute">android:layout_width</span>=<span class="value">"wrap_content"</span></span><br><span class="line">               <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">               <span class="attribute">android:text</span>=<span class="value">"关于我们"</span></span><br><span class="line">               <span class="attribute">android:textSize</span>=<span class="value">"17sp"</span></span><br><span class="line">               <span class="attribute">android:textColor</span>=<span class="value">"@color/myselfblack_buttom_white_bg"</span></span><br><span class="line">               <span class="attribute">android:layout_centerVertical</span>=<span class="value">"true"</span></span><br><span class="line">               <span class="attribute">android:gravity</span>=<span class="value">"center"</span></span><br><span class="line">               <span class="attribute">android:duplicateParentState</span>=<span class="value">"true"</span></span><br><span class="line">               /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>white_buttom_pressed_red.xml设置对应的颜色<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">selector</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:drawable</span>=<span class="value">"@color/project_listview_red"</span> <span class="attribute">android:state_pressed</span>=<span class="value">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">item</span> <span class="attribute">android:drawable</span>=<span class="value">"@color/white"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">selector</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="声明">声明</h2><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/button/" rel="tag">#button</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/26/base64DesEncryption/" rel="next">客户端传参数Beas64+DES加解密</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/09/21/layoutButton/"
+     data-title="那些年，我用过Button"
+     data-content=""
+     data-url="http://foobean.com/2015/09/21/layoutButton/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+            <!-- 多说热评文章-->
+            <p>热评文章</p>
+            <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/09/21/layoutButton/"
+                   data-title="那些年，我用过Button" data-url="http://foobean.com/2015/09/21/layoutButton/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="foobean" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">foobean</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">JAVA程序猿|Android攻城狮</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/foobean" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/foobean" target="_blank">Weibo</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最简单的按下Button"><span class="nav-number">1.</span> <span class="nav-text">最简单的按下Button</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空框子button"><span class="nav-number">2.</span> <span class="nav-text">空框子button</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圆角效果_button"><span class="nav-number">3.</span> <span class="nav-text">圆角效果 button</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#layout父类点击"><span class="nav-number">4.</span> <span class="nav-text">layout父类点击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">5.</span> <span class="nav-text">声明</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">foobean</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+   
+</div>
+<br/>
+<div class="theme-info">
+  <span id="busuanzi_container_site_pv">
+      本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  -
+  <span id="busuanzi_container_site_uv">
+      本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"foobean"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
