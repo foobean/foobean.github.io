@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Base64,Des," />
+  <meta name="keywords" content="audio,voice," />
 
 
 
@@ -37,16 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="web端跟客户端传参数问题一般我们直接传数据这样问题不大，但一旦源码被反编译，拼接成参数数据去请求后端就很危险了，所以要去参数进行加密。现在参数是这样的  加密的原json串+@+密钥  作为value    最终传的参数还是json {“params”：“加密数据”}好，下面直接代码密钥 随机数，可以客户端存就行1public static final String BASE_KEY = &quot;AC">
+<meta name="description" content="有个功能HTML5页面需要播放mp3用的是audio标签现在JS直接播放在Android手机下都可以 如下123//播放指引音频var audio = document.getElementById(&quot;directionAudioPathId&quot;);audio.play();
+但在美版，港版下Safari必须触发事件才可以播放 如下 触发touchstart123document.addEventL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="客户端传参数Beas64+DES加解密">
-<meta property="og:url" content="http://foobean.com/2015/08/26/base64DesEncryption/index.html">
+<meta property="og:title" content="IOS手机微信Safari不能自动播放mp3怎么办?">
+<meta property="og:url" content="http://foobean.com/2016/02/04/weixinIOSAodio/index.html">
 <meta property="og:site_name" content="FooBean">
-<meta property="og:description" content="web端跟客户端传参数问题一般我们直接传数据这样问题不大，但一旦源码被反编译，拼接成参数数据去请求后端就很危险了，所以要去参数进行加密。现在参数是这样的  加密的原json串+@+密钥  作为value    最终传的参数还是json {“params”：“加密数据”}好，下面直接代码密钥 随机数，可以客户端存就行1public static final String BASE_KEY = &quot;AC">
-<meta property="og:updated_time" content="2015-08-26T03:35:44.354Z">
+<meta property="og:description" content="有个功能HTML5页面需要播放mp3用的是audio标签现在JS直接播放在Android手机下都可以 如下123//播放指引音频var audio = document.getElementById(&quot;directionAudioPathId&quot;);audio.play();
+但在美版，港版下Safari必须触发事件才可以播放 如下 触发touchstart123document.addEventL">
+<meta property="og:updated_time" content="2016-02-04T03:34:10.568Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="客户端传参数Beas64+DES加解密">
-<meta name="twitter:description" content="web端跟客户端传参数问题一般我们直接传数据这样问题不大，但一旦源码被反编译，拼接成参数数据去请求后端就很危险了，所以要去参数进行加密。现在参数是这样的  加密的原json串+@+密钥  作为value    最终传的参数还是json {“params”：“加密数据”}好，下面直接代码密钥 随机数，可以客户端存就行1public static final String BASE_KEY = &quot;AC">
+<meta name="twitter:title" content="IOS手机微信Safari不能自动播放mp3怎么办?">
+<meta name="twitter:description" content="有个功能HTML5页面需要播放mp3用的是audio标签现在JS直接播放在Android手机下都可以 如下123//播放指引音频var audio = document.getElementById(&quot;directionAudioPathId&quot;);audio.play();
+但在美版，港版下Safari必须触发事件才可以播放 如下 触发touchstart123document.addEventL">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +59,7 @@
   };
 </script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <title> 客户端传参数Beas64+DES加解密 | FooBean </title>
+  <title> IOS手机微信Safari不能自动播放mp3怎么办? | FooBean </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +176,7 @@
           
           
             
-              客户端传参数Beas64+DES加解密
+              IOS手机微信Safari不能自动播放mp3怎么办?
             
           
         </h1>
@@ -182,8 +185,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-26T10:34:56+08:00" content="2015-08-26">
-            2015-08-26
+          <time itemprop="dateCreated" datetime="2016-02-04T10:55:05+08:00" content="2016-02-04">
+            2016-02-04
           </time>
         </span>
 
@@ -192,20 +195,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Web/" itemprop="url" rel="index">
-                  <span itemprop="name">Web</span>
-                </a>
-              </span>
-
-              
-              
-                ， 
-              
-
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Web/Android/" itemprop="url" rel="index">
-                  <span itemprop="name">Android</span>
+                <a href="/categories/微信/" itemprop="url" rel="index">
+                  <span itemprop="name">微信</span>
                 </a>
               </span>
 
@@ -220,8 +211,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/26/base64DesEncryption/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/26/base64DesEncryption/" itemprop="commentsCount"></span>
+              <a href="/2016/02/04/weixinIOSAodio/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/04/weixinIOSAodio/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -235,11 +226,13 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="web端跟客户端传参数问题">web端跟客户端传参数问题</h1><p>一般我们直接传数据这样问题不大，但一旦源码被反编译，拼接成参数数据去请求后端就很危险了，所以要去参数进行加密。<br>现在参数是这样的  加密的原json串+@+密钥  作为value    最终传的参数还是json {“params”：“加密数据”}<br>好，下面直接代码<br>密钥 随机数，可以客户端存就行<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String BASE_KEY = <span class="string">"ACB39SS34MOPODDSFF10QW"</span>;</span><br></pre></td></tr></table></figure></p>
-<h1 id="原来的密钥，二次提取">原来的密钥，二次提取</h1><p>只是取其中部分字符串作为密钥，这个提取要保证跟web端一致性，要不解密不了这样密钥独一无二的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> String <span class="title">getRealKey</span><span class="params">(String key)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">final</span> String dyKey = key;</span><br><span class="line">       <span class="keyword">int</span> len = BASE_KEY.length();</span><br><span class="line">       <span class="keyword">int</span> len2 = dyKey.length();</span><br><span class="line">       StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">       sb.append(BASE_KEY.charAt(len - <span class="number">1</span>));</span><br><span class="line">       sb.append(dyKey.charAt(len2 - <span class="number">1</span>));</span><br><span class="line">       sb.append(BASE_KEY.charAt(<span class="number">2</span>));</span><br><span class="line">       sb.append(BASE_KEY.charAt(<span class="number">1</span>));</span><br><span class="line">       sb.append(dyKey.charAt(<span class="number">5</span>));</span><br><span class="line">       sb.append(BASE_KEY.charAt(<span class="number">2</span>));</span><br><span class="line">       sb.append(dyKey.charAt(len2 - <span class="number">2</span>));</span><br><span class="line">       sb.append(dyKey.charAt(len2 - <span class="number">3</span>));</span><br><span class="line">       String fKey = sb.toString();</span><br><span class="line">       <span class="keyword">return</span> fKey;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="加解密demo">加解密demo</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">IEncoder encoder = <span class="keyword">new</span> DESMain();</span><br><span class="line">String mykey = DESEncryptUtil.encode(<span class="string">"bean2015"</span>, System.currentTimeMillis() + <span class="string">""</span>).substring(<span class="number">10</span>);</span><br><span class="line">String json = <span class="string">"&#123;\"userid\":\"186\",\"size\":\"10\",\"isRead\":\"0\", \"msgId\":\"185\"&#125;"</span>;</span><br><span class="line">String data = encoder.encode(json, mykey);</span><br><span class="line">Log.d(TAG,<span class="string">"data:"</span>+data);</span><br><span class="line">String sendData = data + <span class="string">"@"</span> + mykey;<span class="comment">//这个数据发给WEB服务端，@后面是密钥</span></span><br><span class="line">Log.d(TAG,<span class="string">"sendData:"</span>+sendData);</span><br><span class="line"></span><br><span class="line"><span class="comment">//服务端解密</span></span><br><span class="line">String str[] = sendData.split(<span class="string">"@"</span>);</span><br><span class="line">IDecoder decoder = <span class="keyword">new</span> DESMain();</span><br><span class="line">data = decoder.decode(str[<span class="number">0</span>], str[<span class="number">1</span>]);</span><br><span class="line">Log.d(TAG,<span class="string">"解密Data:"</span>+data);</span><br></pre></td></tr></table></figure>
-<p>存在问题是DES加密使用的是同一个key，所以进行二次提取，保存第一个版本用一个不同key.<br>源码传送门<a href="https://github.com/foobean/DesEncrypt" target="_blank" rel="external">github demo</a></p>
-<h1 id="声明">声明</h1><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
+        <span itemprop="articleBody"><p>有个功能HTML5页面需要播放mp3用的是audio标签<br>现在JS直接播放在Android手机下都可以 如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//播放指引音频</span></span><br><span class="line">var audio = document.getElementById(<span class="string">"directionAudioPathId"</span>);</span><br><span class="line">audio.play();</span><br></pre></td></tr></table></figure></p>
+<p>但在美版，港版下Safari必须触发事件才可以播放 如下 触发touchstart<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(<span class="string">'touchstart'</span>, function()&#123; Safari必须事件来播放</span><br><span class="line">    audio.play();</span><br><span class="line">&#125;, <span class="keyword">false</span>);</span><br></pre></td></tr></table></figure></p>
+<p>这个<a href="http://www.ibm.com/developerworks/cn/web/wa-ioshtml5/" target="_blank" rel="external">IBM文档</a> 有说明</p>
+<p>各个查资料，找人 终于找到办法如下</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 必须加在微信api资源 --&gt;</span><br><span class="line">&lt;script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.addEventListener("WeixinJSBridgeReady", function () &#123;</span><br><span class="line">			audio.play();</span><br><span class="line">	    &#125;, false); //IOS自动播放</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="但如果有多个音频连续播放怎么搞？">但如果有多个音频连续播放怎么搞？</h1><p>发现一个audio-js插件超赞<br><a href="http://www.schillmania.com/projects/soundmanager2/" target="_blank" rel="external">SoundManager2</a>利用 HTML5 和 Flash 技术提供了稳定和阔平台的音乐播放功能，只有 10K 的 JS 包。支持MP3, MPEG4 and HTML5 Audio等格式<br><a href="http://www.schillmania.com/projects/soundmanager2/demo/api/#onfinish-with-multishot-events" target="_blank" rel="external">官方例子</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">soundManager.createSound(&#123;</span><br><span class="line"> id: <span class="string">'aBassDrum'</span>,</span><br><span class="line"> url: <span class="string">'../mpc/audio/AMB_BD_1.mp3'</span>,</span><br><span class="line"> multiShot: <span class="keyword">false</span>,</span><br><span class="line"> <span class="comment">// when the first sound finishes...</span></span><br><span class="line"> onfinish: function() &#123;</span><br><span class="line">   <span class="comment">// create and play the second.</span></span><br><span class="line">   soundManager.createSound(&#123;</span><br><span class="line">     id: <span class="string">'aRimSound'</span>,</span><br><span class="line">     url: <span class="string">'../mpc/audio/AMB_RIM1.mp3'</span></span><br><span class="line">   &#125;).play();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;);</span><br><span class="line">soundManager.play(<span class="string">'aBassDrum'</span>);</span><br></pre></td></tr></table></figure></p>
+<h2 id="声明">声明</h2><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
 </span>
       
     </div>
@@ -248,9 +241,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Base64/" rel="tag">#Base64</a>
+            <a href="/tags/audio/" rel="tag">#audio</a>
           
-            <a href="/tags/Des/" rel="tag">#Des</a>
+            <a href="/tags/voice/" rel="tag">#voice</a>
           
         </div>
       
@@ -259,13 +252,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/21/layoutButton/" rel="prev">那些年，我用过Button</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/23/proguard-mix/" rel="next">AS下的proguard使用心得</a>
+              <a href="/2015/09/21/layoutButton/" rel="next">那些年，我用过Button</a>
             
           </div>
         </div>
@@ -280,10 +271,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/08/26/base64DesEncryption/"
-     data-title="客户端传参数Beas64+DES加解密"
+        <div class="ds-share flat" data-thread-key="2016/02/04/weixinIOSAodio/"
+     data-title="IOS手机微信Safari不能自动播放mp3怎么办?"
      data-content=""
-     data-url="http://foobean.com/2015/08/26/base64DesEncryption/">
+     data-url="http://foobean.com/2016/02/04/weixinIOSAodio/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -313,8 +304,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/26/base64DesEncryption/"
-                   data-title="客户端传参数Beas64+DES加解密" data-url="http://foobean.com/2015/08/26/base64DesEncryption/">
+              <div class="ds-thread" data-thread-key="2016/02/04/weixinIOSAodio/"
+                   data-title="IOS手机微信Safari不能自动播放mp3怎么办?" data-url="http://foobean.com/2016/02/04/weixinIOSAodio/">
               </div>
             
           </div>
@@ -406,7 +397,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web端跟客户端传参数问题"><span class="nav-number">1.</span> <span class="nav-text">web端跟客户端传参数问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原来的密钥，二次提取"><span class="nav-number">2.</span> <span class="nav-text">原来的密钥，二次提取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加解密demo"><span class="nav-number">3.</span> <span class="nav-text">加解密demo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#声明"><span class="nav-number">4.</span> <span class="nav-text">声明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#但如果有多个音频连续播放怎么搞？"><span class="nav-number">1.</span> <span class="nav-text">但如果有多个音频连续播放怎么搞？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#声明"><span class="nav-number">1.1.</span> <span class="nav-text">声明</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
