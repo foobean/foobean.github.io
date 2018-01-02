@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: Base64 | 
+            Java并行多任务执行 | 
         
         FooBean
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="foobean">
     <meta name="description" content="JAVA程序猿|Android攻城狮">
-    <meta name="keywords" content="java,foobean,android">
+    <meta name="keywords" content="java,foobean,android,Thread">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -62,9 +62,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://foobean.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Base64 | FooBean">
+    <meta property="og:title" content="Java并行多任务执行 | FooBean">
     <meta property="og:description" content="JAVA程序猿|Android攻城狮">
-    
+    <meta property="og:article:tag" content="Thread"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -241,96 +241,381 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#声明"><span class="post-toc-number">1.</span> <span class="post-toc-text">声明</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2015/08/26/base64DesEncryption/">客户端传参数Beas64+DES加解密</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            web端跟客户端传参数问题一般我们直接传数据这样问题不大，但一旦源码被反编译，拼接成参数数据...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2015/08/26/base64DesEncryption/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="foobean's avatar">
-            </div>
-            <div>
-                <strong>foobean</strong>
-                <span>8月 26, 2015</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Web/">Web</a>, <a class="post_category-link" href="/categories/Web/Android/">Android</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Java并行多任务执行
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>foobean</strong>
+        <span>1月 02, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Thread/">Thread</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java并行多任务执行&url=http://foobean.com//2018/01/02/fixedThreadPool/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=FooBean&title=Java并行多任务执行&summary=JAVA程序猿|Android攻城狮&pics=http://foobean.com/img/favicon.png&url=http://foobean.com/2018/01/02/fixedThreadPool/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <pre><code class="java"><span class="comment">/** 
+     * 测试函数 
+     *  
+     * <span class="doctag">@throws</span> InterruptedException 
+     */</span>  
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testThread</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>{  
+        <span class="keyword">int</span> threadNum = <span class="number">300</span>;  
+        <span class="comment">// 初始化countDown  </span>
+        CountDownLatch threadSignal = <span class="keyword">new</span> CountDownLatch(threadNum);  
+        <span class="comment">// 创建固定长度的线程池  </span>
+
+        <span class="comment">//此处不可以用接口 需要使用Executor的实现类 ExecutorService  Executor未提供shutdown等方法  </span>
+        ExecutorService executor = Executors.newFixedThreadPool(threadNum);  
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">637</span>; i++) { <span class="comment">// 开threadNum个线程  </span>
+            Runnable task = <span class="keyword">new</span> TestThread(threadSignal);  
+            <span class="comment">// 执行  </span>
+            executor.execute(task);  
+            System.out.println(<span class="string">"剩余任务数量："</span>+ (prenum -<span class="number">1</span>));
+        }  
+        threadSignal.await(); <span class="comment">// 等待所有子线程执行完  </span>
+        <span class="comment">//固定线程池执行完成后 将释放掉资源 退出主进程  </span>
+        executor.shutdown();<span class="comment">//并不是终止线程的运行，而是禁止在这个Executor中添加新的任务  </span>
+        <span class="comment">// do work end  </span>
+        <span class="comment">//退出主进程  </span>
+        System.out.println(Thread.currentThread().getName() + <span class="string">"+++++++结束."</span>);  
+    }
+</code></pre>
+<pre><code class="java"><span class="comment">/** 
+     *  
+     * 此可以做完内部类 也可以不做未内部类 
+     * 作为内部类的时候 有一个好处 就是可以直接引用给类的主对象的成员变量 如此处的name 
+     * 当然 
+     */</span>  
+    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>{  
+        <span class="keyword">private</span> CountDownLatch threadsSignal;  
+
+        <span class="function"><span class="keyword">public</span> <span class="title">TestThread</span><span class="params">(CountDownLatch threadsSignal)</span> </span>{  
+            <span class="keyword">this</span>.threadsSignal = threadsSignal;  
+        }  
+
+
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>{  
+            name = Thread.currentThread().getName();
+            System.out.println( name + <span class="string">"开始..."</span> );  
+            System.out.printf(<span class="string">"开始了线程：：：："</span> + threadsSignal.getCount());  
+
+            <span class="comment">// do shomething 核心处理逻辑   </span>
+            goRedis(name);
+
+
+
+
+
+            <span class="comment">// 线程结束时计数器减1  </span>
+            threadsSignal.countDown();<span class="comment">//必须等核心处理逻辑处理完成后才可以减1  </span>
+            <span class="comment">/*  */</span>
+            System.out.println(Thread.currentThread().getName() + <span class="string">"结束. 还有"</span>  
+                    + threadsSignal.getCount() + <span class="string">" 个线程 "</span>);
+        }  
+    }
+</code></pre>
+<blockquote>
+<p>newCachedThreadPool在线程池里的线程如果60秒未被用到就杀掉了，适合短任务<br>newFixedThreadPool线程池里的线程一直存在，适合长任务</p>
+</blockquote>
+<p><strong>注意 Redis的原子性</strong><br><img src="http://ouclhdo71.bkt.clouddn.com/clipboard-redis.png" alt=""></p>
+<p> Caused by: java.lang.ClassCastException: [B cannot be cast to java.util.List<br>后来发现是因为我做了redis 连接的线程池,使用的一直是一个在父类里申明的静态变量,各个地方调,都是直接用.使用完之后也没有释放.所以每次项目跑着跑着,过几个小时就访问超级慢.最后发现是因为使用的是一个连接的原因. 现在改为每次使用都先初始化,然后每次用完之后都释放.</p>
+<h2 id="声明">声明</h2><p>由于互联网数据的分享性，如果我发表的文章，来源于您的原创文章，且我没有注明，请微博私信或者邮件foo.bean@gmail.com说明。<br>欢迎转载，但请注明文章原始出处。<br>作者：foobean<br>出处：<a href="http://foobean.com/">http://foobean.com/</a></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://foobean.com/2018/01/02/fixedThreadPool/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://foobean.com/2018/01/02/fixedThreadPool/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//foobean.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/08/08/linux-msyhttf/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -515,6 +800,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
